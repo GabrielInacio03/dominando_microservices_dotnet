@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "RgLS+/2R1S0=",
+  "success": true,
+  "projectFilePath": "/home/inacio/Documentos/Projetos/Pessoal/GabrielInacio03/dominando_microservices_dotnet/Secao08_PrimeiroMicrosservico/FrontEnd/GeekShooping.Web/GeekShooping.Web.csproj",
+  "expectedPackageFiles": [
+    "/home/inacio/.nuget/packages/microsoft.netcore.app.ref/6.0.36/microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
+    "/home/inacio/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.36/microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512",
+    "/home/inacio/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.36/microsoft.netcore.app.host.linux-x64.6.0.36.nupkg.sha512"
+  ],
+  "logs": []
+}
