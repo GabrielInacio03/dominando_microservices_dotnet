@@ -31,14 +31,23 @@ namespace GeekShooping.ProductAPI.Repository
 
         public async Task<bool> Delete(long id)
         {
-            var product = await _context.Products.Where(p => p.Id == id).FirstOrDefaultAsync();
+            try
+            {
+                var product = await _context.Products.Where(p => p.Id == id).FirstOrDefaultAsync();
 
-            if (product == null) return false;
+                if (product == null) return false;
 
-            _context.Products.Remove(product);
-            _context.SaveChanges();
-            
-            return true;
+                _context.Products.Remove(product);
+                _context.SaveChanges();
+                
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error deleting product: {ex.Message}");
+                return false;
+            }
+           
         }
 
         public async Task<IEnumerable<ProductVO>> FindAll()
@@ -56,8 +65,10 @@ namespace GeekShooping.ProductAPI.Repository
         public async Task<ProductVO> Update(ProductVO product)
         {
             var productEntity = _mapper.Map<Models.Product>(product);
+
             _context.Products.Update(productEntity);
             await _context.SaveChangesAsync();
+            
             return _mapper.Map<ProductVO>(productEntity);
         }
     }

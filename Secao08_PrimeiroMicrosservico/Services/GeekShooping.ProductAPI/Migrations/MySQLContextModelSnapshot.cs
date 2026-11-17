@@ -53,6 +53,35 @@ namespace GeekShooping.ProductAPI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("product");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 2L,
+                            CategoryName = "Category 1",
+                            Description = "Description for Product 1",
+                            ImageUrl = "https://example.com/product1.jpg",
+                            Name = "Product 1",
+                            Price = 10.0m
+                        },
+                        new
+                        {
+                            Id = 3L,
+                            CategoryName = "Category 2",
+                            Description = "Description for Product 2",
+                            ImageUrl = "https://example.com/product2.jpg",
+                            Name = "Product 2",
+                            Price = 20.0m
+                        },
+                        new
+                        {
+                            Id = 4L,
+                            CategoryName = "Category 3",
+                            Description = "Description for Product 3",
+                            ImageUrl = "https://example.com/product3.jpg",
+                            Name = "Product 3",
+                            Price = 30.0m
+                        });
                 });
 #pragma warning restore 612, 618
         }
