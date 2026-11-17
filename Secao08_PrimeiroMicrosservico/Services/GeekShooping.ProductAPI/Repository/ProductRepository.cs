@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using AutoMapper;
+using GeekShooping.ProductAPI.Data.ValueObjects;
+using GeekShooping.ProductAPI.Models.Context;
+using Microsoft.EntityFrameworkCore;
+
+namespace GeekShooping.ProductAPI.Repository
+{
+    public class ProductRepository : IProductRepository
+    {
+        private readonly MySQLContext _context;
+        private readonly IMapper _mapper;
+
+        public ProductRepository(MySQLContext context, IMapper mapper)
+        {
+            _context = context;
+            _mapper = mapper;
+        }
+        public Task<ProductVO> Create(ProductVO product)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> Delete(long id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async Task<IEnumerable<ProductVO>> FindAll()
+        {
+            var products = await _context.Products.ToListAsync();
+            return _mapper.Map<IEnumerable<ProductVO>>(products);
+        }
+
+        public async Task<ProductVO> FindById(long id)
+        {
+            var product = await _context.Products.Where(p => p.Id == id).FirstOrDefaultAsync();
+            return _mapper.Map<ProductVO>(product);
+        }
+
+        public Task<ProductVO> Update(ProductVO product)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
