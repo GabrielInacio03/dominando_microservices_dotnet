@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{58
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShooping.ProductAPI", "Services\GeekShooping.ProductAPI\GeekShooping.ProductAPI.csproj", "{AC4CAA41-0A0D-4D8D-B175-8F2BA4EA2BD9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{CF54659F-08FA-4356-BCED-A65AB7E0017C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShooping.Web", "FrontEnd\GeekShooping.Web\GeekShooping.Web.csproj", "{DA3F22F8-CCBE-426D-9B88-8E414B621638}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,11 +33,24 @@ Global
 		{AC4CAA41-0A0D-4D8D-B175-8F2BA4EA2BD9}.Release|x64.Build.0 = Release|Any CPU
 		{AC4CAA41-0A0D-4D8D-B175-8F2BA4EA2BD9}.Release|x86.ActiveCfg = Release|Any CPU
 		{AC4CAA41-0A0D-4D8D-B175-8F2BA4EA2BD9}.Release|x86.Build.0 = Release|Any CPU
+		{DA3F22F8-CCBE-426D-9B88-8E414B621638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA3F22F8-CCBE-426D-9B88-8E414B621638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA3F22F8-CCBE-426D-9B88-8E414B621638}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DA3F22F8-CCBE-426D-9B88-8E414B621638}.Debug|x64.Build.0 = Debug|Any CPU
+		{DA3F22F8-CCBE-426D-9B88-8E414B621638}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DA3F22F8-CCBE-426D-9B88-8E414B621638}.Debug|x86.Build.0 = Debug|Any CPU
+		{DA3F22F8-CCBE-426D-9B88-8E414B621638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA3F22F8-CCBE-426D-9B88-8E414B621638}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA3F22F8-CCBE-426D-9B88-8E414B621638}.Release|x64.ActiveCfg = Release|Any CPU
+		{DA3F22F8-CCBE-426D-9B88-8E414B621638}.Release|x64.Build.0 = Release|Any CPU
+		{DA3F22F8-CCBE-426D-9B88-8E414B621638}.Release|x86.ActiveCfg = Release|Any CPU
+		{DA3F22F8-CCBE-426D-9B88-8E414B621638}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{AC4CAA41-0A0D-4D8D-B175-8F2BA4EA2BD9} = {5854FF58-B8C5-05C6-5BF2-ACE42193F22B}
+		{DA3F22F8-CCBE-426D-9B88-8E414B621638} = {CF54659F-08FA-4356-BCED-A65AB7E0017C}
 	EndGlobalSection
 EndGlobal
