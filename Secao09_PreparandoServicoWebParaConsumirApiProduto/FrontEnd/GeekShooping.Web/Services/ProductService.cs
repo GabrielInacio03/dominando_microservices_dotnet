@@ -19,30 +19,50 @@ namespace GeekShooping.Web.Services
         public async Task<IEnumerable<ProductModel>> FindAllProducts()
         {
             var response = await _httpClient.GetAsync(BasePath);
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Something went wrong when calling API");
+            }
             return await response.Content.ReadFromJsonAsync<IEnumerable<ProductModel>>();
         }
 
         public async Task<ProductModel> FindProductById(long id)
         {
             var response = await _httpClient.GetAsync($"{BasePath}/{id}");
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Something went wrong when calling API");
+            }
             return await response.Content.ReadFromJsonAsync<ProductModel>();
         }
 
         public async Task<ProductModel> CreateProduct(ProductModel model)
         {
             var response = await _httpClient.PostAsJsonAsync(BasePath, model);
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Something went wrong when calling API");
+            }
             return await response.Content.ReadFromJsonAsync<ProductModel>();
         }
 
         public async Task<ProductModel> UpdateProduct(ProductModel model)
         {
             var response = await _httpClient.PutAsJsonAsync($"{BasePath}/{model.Id}", model);
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Something went wrong when calling API");
+            }
             return await response.Content.ReadFromJsonAsync<ProductModel>();
         }
 
         public async Task<bool> DeleteProduct(long id)
         {
             var response = await _httpClient.DeleteAsync($"{BasePath}/{id}");
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Something went wrong when calling API");
+            }
             return response.IsSuccessStatusCode;
         }
         
